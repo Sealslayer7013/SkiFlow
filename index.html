@@ -4,10 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #003f7f, #87CEEB);
+            color: white;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+        h1 {
+            color: #0055a5;
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.5;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #0055a5;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #003f7f;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            background: white;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: snowfall linear infinite;
+        }
+        @keyframes snowfall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Ski Flow!</h1>
-    <p>Upload your skiing video for expert analysis.</p>
-    <a href="https://forms.gle/tbUimEp2HEjz4QWS6" target="_blank">Submit Your Video</a>
+    <div class="container">
+        <h1>Ski Flow</h1>
+        <p>Upload your skiing video for expert review today! As we develop our AI-powered analysis, you'll be among the first to receive two free automated technique breakdowns when we launch. Our AI will learn from expert feedback to provide insights on form, balance, and technique—helping you improve faster!</p>
+        <a href="https://forms.gle/tbUimEp2HEjz4QWS6" class="btn" target="_blank">Submit Your Video</a>
+    </div>
+    <script>
+        function createSnowflakes() {
+            const snowflakeCount = 50;
+            for (let i = 0; i < snowflakeCount; i++) {
+                let snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                document.body.appendChild(snowflake);
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+                snowflake.style.animationDelay = Math.random() * 5 + "s";
+            }
+        }
+        createSnowflakes();
+    </script>
 </body>
 </html>
