@@ -13,10 +13,10 @@
             background: linear-gradient(to bottom, #003f7f, #87CEEB);
             color: white;
             overflow: hidden;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
         }
         .container {
             background: rgba(255, 255, 255, 0.9);
@@ -24,20 +24,38 @@
             border-radius: 15px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
             max-width: 600px;
-            text-align: center;
+            text-align: left;
         }
         h1 {
             color: #0055a5;
             font-size: 36px;
+            text-align: center;
         }
         p {
             font-size: 18px;
             color: #333;
             line-height: 1.5;
+            text-align: center;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        ul li img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
         }
         .btn {
-            display: inline-block;
-            margin-top: 20px;
+            display: block;
+            margin: 20px auto 0;
             padding: 12px 25px;
             background-color: #0055a5;
             color: white;
@@ -46,6 +64,8 @@
             font-weight: bold;
             border-radius: 5px;
             transition: background 0.3s;
+            text-align: center;
+            width: fit-content;
         }
         .btn:hover {
             background-color: #003f7f;
@@ -70,9 +90,30 @@
 <body>
     <div class="container">
         <h1>Ski Flow</h1>
-        <p>Upload your skiing video for expert review today! As we develop our AI-powered analysis, you'll be among the first to receive two free automated technique breakdowns when we launch. Our AI will learn from expert feedback to provide insights on form, balance, and technique—helping you improve faster!</p>
+        <p>Upload your skiing video for expert review today! As we develop our AI-powered analysis, you'll be among the first to receive two free automated technique breakdowns when we launch.</p>
+        
+        <ul>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/3039/3039406.png" alt="AI Analysis">
+                AI-powered breakdown of your skiing technique
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Expert Feedback">
+                Receive feedback from professional skiers
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/2995/2995524.png" alt="Performance Improvement">
+                Improve balance, form, and efficiency
+            </li>
+            <li>
+                <img src="https://cdn-icons-png.flaticon.com/512/3105/3105810.png" alt="Free Analysis">
+                Get two free automated analyses when we launch!
+            </li>
+        </ul>
+
         <a href="https://forms.gle/tbUimEp2HEjz4QWS6" class="btn" target="_blank">Submit Your Video</a>
     </div>
+
     <script>
         function createSnowflakes() {
             const snowflakeCount = 50;
